@@ -1,0 +1,121 @@
+{%- if section.blocks.size > 0 -%}
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @font-face {
+    font-family: 'Microsport';
+    src: url('https://cdn.shopify.com/s/files/1/0695/6485/8673/files/Microsport-Bold.eot?v=1711765174');
+    src: url('https://cdn.shopify.com/s/files/1/0695/6485/8673/files/Microsport-Bold.eot?v=1711765174?#iefix') format('embedded-opentype'),
+        url('https://cdn.shopify.com/s/files/1/0695/6485/8673/files/Microsport-Bold.woff2?v=1711765174') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0695/6485/8673/files/Microsport-Bold.woff?v=1711765174') format('woff'),
+        url('https://cdn.shopify.com/s/files/1/0695/6485/8673/files/Microsport-Bold.ttf?v=1711765174') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  .icon-text_wrapper{padding:100px 0;background-color:#121212;position:relative;}
+  .icon-text_wrapper:before{position:absolute;content:"";top:0;left:0;height:100%;width:100%;background-image:url(https://cdn.shopify.com/s/files/1/0695/6485/8673/files/Group_11285.png?v=1711769328);background-repeat: no-repeat;}
+  .icon-text_wrapper:after{position:absolute;content:"";top:0;right:0;height:100%;width:100%;background-image:url(https://cdn.shopify.com/s/files/1/0695/6485/8673/files/Group_73391122.png?v=1711769418);background-position: right bottom; background-repeat: no-repeat;}
+  .icon-text_wrapper .page-width{max-width:1600px;margin:0 auto}
+  .icon-text_wrapper h2{font-size:42px;font-weight:bold;font-family: 'Microsport';color:#fff;text-align:center;margin:0 0 100px;position:relative;}
+  .icon-img{height:36px;width:36px;margin-right:16px;margin-top:-10px;}
+  .icon-img img{width:100%;max-width:100%;display:block;}
+  .icon-title{display:flex;}
+  .icon-inner-around{display:flex;flex-wrap:wrap;margin-left:-15px;row-gap:80px;}
+  .icon-item{width:100%;max-width:33.33%;padding-left:15px;position:relative;}
+  .icon-title h4{flex:1;margin:0;color:#fff;font-family: 'Microsport';font-size:24px;font-weight:bold;}
+  .icon-item__inner .rte{font-family: "Poppins", sans-serif;color:#fff;font-size:16px;line-height:1.6;letter-spacing: normal;max-width:433px;margin-top:16px;}
+
+  @media screen and (max-width: 1440px){
+    .icon-text_wrapper h2{font-size:32px;margin-bottom:50px;}
+    .icon-title h4{font-size:16px;}
+    .icon-item__inner .rte{font-size:14px;}
+    .icon-text_wrapper{padding:80px 0;}
+  }
+  @media screen and (max-width: 1024px){
+    .icon-text_wrapper h2{font-size:30px;}
+    .icon-inner-around{row-gap:40px;}
+    .icon-item{max-width:50%;}
+  }
+  @media screen and (max-width: 768px){
+    .icon-item__inner .rte{max-width:100%;font-size:12px;}
+    .icon-text_wrapper{padding:60px 0}
+    .icon-item{max-width:100%;}
+    .icon-img{height:30px;width:30px;}
+    .icon-text_wrapper h2{font-size:26px;}
+    .icon-img{margin-top:-8px;}
+  }
+  
+</style>
+
+
+<div class="icon-text_wrapper">
+  <div class="page-width">
+    {% if section.settings.heading != blank %}
+    <h2>{{ section.settings.heading }}</h2>
+    {% endif %}
+    <div class="icon-inner-around">
+      {% for block in section.blocks %}
+      <div class="icon-item">
+        <div class="icon-item__inner">
+        <div class="icon-title">
+         {% if block.settings.image != blank %} <div class="icon-img"><img src="{{ block.settings.image | img_url:'master' }}" alt="icon" /></div>{% endif %}
+         {% if block.settings.title != blank %} <h4>{{ block.settings.title }}</h4>{% endif %}
+        </div>
+        {% if block.settings.text != blank %}
+        <div class="rte">
+         {{ block.settings.text }}
+        </div>
+        {% endif %}
+          </div>
+      </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+
+{% schema %}
+  {
+    "name": "Icon with text",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "What is Lorem Ipsum?",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+    {
+      "type": "icon-with-text",
+      "name": "Icon with text",
+      "settings": [
+       {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select icon"
+       },
+       {
+          "type": "text",
+          "id": "title",
+          "default": "What is Lorem Ipsum?",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</p>",
+          "label": "Content"
+        }
+      ]
+    }
+    ],
+    "presets": [
+      {
+        "name": "Icon with text"
+      }
+    ]
+  }
+{% endschema %}

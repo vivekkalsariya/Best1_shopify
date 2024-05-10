@@ -1,0 +1,13 @@
+<div class="wishlist_icon">
+<a class="action--wishlist tile-actions--btn flex wishlist-btn" href="#" data-product-handle="{{ product.handle }}">
+  <img class="btn--main wish_icon"  src="{{ 'wish_icon.png' | asset_url }}" alt="add to wishlist" title="Add To Wishlist">
+  <img class="btn--main wish_icon_b"  src="{{ 'wish_icon_b.png' | asset_url }}" alt="add to wishlist" title="Remove From Wishlist">
+</a>
+</div>
+<style>
+.action--wishlist .wish_icon_b,
+.action--wishlist.is-active .wish_icon{ display:none; }
+.action--wishlist .wish_icon,
+.action--wishlist.is-active .wish_icon_b{ display:block; }
+
+</style>
