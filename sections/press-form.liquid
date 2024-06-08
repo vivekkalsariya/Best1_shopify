@@ -21,8 +21,8 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
-    {%- form 'contact', id: 'ContactForm', class: 'isolate', title:'Press Customer Inquiry' -%}
-       <input type="hidden" name="contact[press]" value="press-customer"> 
+    {%- form 'contact', id: 'ContactForm', class: 'isolate'-%}
+       <input type="hidden" name="contact[press]" value="press-customer" title="New Custom Order">  
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>{% render 'icon-success' %} {{ 'templates.contact.form.post_success' | t }}</h2>
       {%- elsif form.errors -%}
