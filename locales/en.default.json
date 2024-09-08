@@ -218,23 +218,12 @@
       "form": {
         "title": "Contact form",
         "name": "Name",
-        "last_name": "Last Name",
         "email": "Email",
         "phone": "Phone number",
         "comment": "Comment",
-        "company": "Company",
-        "website": "Website",
+        "send": "Send",
         "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
-        "error_heading": "Please adjust the following:",
-        "industry_type": {
-          "designer": "Designer",
-          "contractors": "Contractors",
-          "electronics": "Electronics Company",
-          "architect": "Architect",
-          "hotel": "Hotel",
-          "real-estate-professional": "Real Estate Professional",
-          "other": "Other"
-        }
+        "error_heading": "Please adjust the following:"
       }
     },
     "404": {
