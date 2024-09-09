@@ -21,7 +21,7 @@
     {%- else -%}
       <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
     {%- endif -%}
-     {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+    {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
           {% render 'icon-success' %}
@@ -167,31 +167,31 @@
            <p class="field_title">Industry *</p>
            <ul>
              <li>
-                <input class="radio-input" id="Designer" type="radio" data-type="radio" name="industry_type" presence="" value="Designer">
+                <input class="radio-input" id="Designer" type="radio" data-type="radio" name="contact[industry_type]" presence="" value="Designer">
                <label for="Designer">{{ 'templates.contact.form.industry_type.designer' | t }}</label>
              </li>
              <li>
-                <input class="radio-input" id="Contractors" type="radio" data-type="radio" name="industry_type" presence="" value="Contractors">
+                <input class="radio-input" id="Contractors" type="radio" data-type="radio" name="contact[industry_type]" presence="" value="Contractors">
                <label for="Contractors">{{ 'templates.contact.form.industry_type.contractors' | t }}</label>
              </li>
              <li>
-                <input class="radio-input" id="Electronics-Company" type="radio" data-type="radio" name="industry_type" presence="" value="Electronics-Company">
+                <input class="radio-input" id="Electronics-Company" type="radio" data-type="radio" name="contact[industry_type]" presence="" value="Electronics Company">
                <label for="Electronics-Company">{{ 'templates.contact.form.industry_type.electronics' | t }}</label>
              </li>
              <li>
-                <input class="radio-input" id="Architect" type="radio" data-type="radio" name="industry_type" presence="" value="Architect">
+                <input class="radio-input" id="Architect" type="radio" data-type="radio" name="contact[industry_type]" presence="" value="Architect">
                <label for="Architect">{{ 'templates.contact.form.industry_type.architect' | t }}</label>
              </li>
              <li>
-                <input class="radio-input" id="Hotel" type="radio" data-type="radio" name="industry_type" presence="" value="Hotel">
+                <input class="radio-input" id="Hotel" type="radio" data-type="radio" name="contact[industry_type]" presence="" value="Hotel">
                <label for="Hotel">{{ 'templates.contact.form.industry_type.hotel' | t }}</label>
              </li>
              <li>
-                <input class="radio-input" id="Real-Estate-Professional" type="radio" data-type="radio" name="industry_type" presence="" value="Real-Estate-Professional">
+                <input class="radio-input" id="Real-Estate-Professional" type="radio" data-type="radio" name="contact[industry_type]" presence="" value="Real Estate Professional">
                <label for="Real-Estate-Professional">{{ 'templates.contact.form.industry_type.real-estate-professional' | t }}</label>
              </li>
              <li>
-                <input class="radio-input" id="Other" type="radio" data-type="radio" name="industry_type" presence="" value="Other">
+                <input class="radio-input" id="Other" type="radio" data-type="radio" name="contact[industry_type]" presence="" value="Other">
                <label for="Other">{{ 'templates.contact.form.industry_type.other' | t }}</label>
              </li>
            </ul>
