@@ -1,0 +1,93 @@
+#snow-build-up {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    transition: all 0.1s;
+    height: calc(100vh + 100px);
+    display: none;
+}
+body.home #snow-build-up{
+    display: block;
+}
+body.home .hero-vide-wrap .hero-cap {
+    position: absolute;
+    right: -55px;
+    top: -72px;
+    z-index: 1;
+}
+body.home .hero-santa {
+    position: absolute;
+    left: -169px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s;
+    animation: slideInFromLeft 2.5s infinite alternate;
+}
+@keyframes slideInFromLeft {
+    0% {
+        left: -30px; /* Start off-screen */
+    }
+    100% {
+        left: -169px; /* Final position under the cap */
+    }
+}
+body.home .hero-vide-wrap .image-text,
+body.home .hero-img-video .image:before{
+    display: none;
+}
+body.home .hero-vide-wrap .hero-img-video .play-video {
+    bottom: 32px;
+    top: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 76px;
+}
+body.home .hero-vide-wrap .play-video:after{
+    border-color: #b0a8a8;
+}
+body.home .hero-sec {
+    position: relative;
+}
+body.home .trusted-web-sec{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+@media only screen and (max-width: 1199px) {
+    body.home .hero-sec .hero-img-video .image img{
+        object-position: top center;
+    }
+    body.home .hero-santa{
+        left: -80px;
+        margin-top: -60px;
+    }
+    body.home .hero-santa img {
+        max-width: 130px;
+    }
+    @keyframes slideInFromLeft {
+        0% {
+            left: 0px; /* Start off-screen */
+        }
+        100% {
+            left: -80px; /* Final position under the cap */
+        }
+    }
+}
+@media only screen and (max-width: 810px) {
+    body.home .hero-santa{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px) {
+    body.home .hero-vide-wrap .hero-cap{
+        right: -30px;
+        top: -42px;
+    }
+    body.home .hero-vide-wrap .hero-cap img {
+        max-width: 70px;
+    }
+    body.home .hero-vide-wrap .hero-img-video .play-video{
+        bottom: 20px;
+    }
+}
