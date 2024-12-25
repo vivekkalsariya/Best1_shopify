@@ -4,18 +4,18 @@
     width: 100%;
     transition: all 0.1s;
     height: calc(100vh + 100px);
-    display: none;
+   
 }
-body.home #snow-build-up{
+ #snow-build-up{
     display: block;
 }
-body.home .hero-vide-wrap .hero-cap {
+ .hero-vide-wrap .hero-cap {
     position: absolute;
     right: -55px;
     top: -72px;
     z-index: 1;
 }
-body.home .hero-santa {
+ .hero-santa {
     position: absolute;
     left: -169px;
     top: 50%;
@@ -31,11 +31,11 @@ body.home .hero-santa {
         left: -169px; /* Final position under the cap */
     }
 }
-body.home .hero-vide-wrap .image-text,
-body.home .hero-img-video .image:before{
+ .hero-vide-wrap .image-text,
+ .hero-img-video .image:before{
     display: none;
 }
-body.home .hero-vide-wrap .hero-img-video .play-video {
+ .hero-vide-wrap .hero-img-video .play-video {
     bottom: 32px;
     top: auto;
     -webkit-transform: translateX(-50%);
@@ -43,26 +43,26 @@ body.home .hero-vide-wrap .hero-img-video .play-video {
     transform: translateX(-50%);
     width: 76px;
 }
-body.home .hero-vide-wrap .play-video:after{
+.hero-vide-wrap .play-video:after{
     border-color: #b0a8a8;
 }
-body.home .hero-sec {
+ .hero-sec {
     position: relative;
 }
-body.home .trusted-web-sec{
+.trusted-web-sec{
     position: relative;
     z-index: 2;
     overflow: hidden;
 }
 @media only screen and (max-width: 1199px) {
-    body.home .hero-sec .hero-img-video .image img{
+    .hero-sec .hero-img-video .image img{
         object-position: top center;
     }
-    body.home .hero-santa{
+     .hero-santa{
         left: -80px;
         margin-top: -60px;
     }
-    body.home .hero-santa img {
+     .hero-santa img {
         max-width: 130px;
     }
     @keyframes slideInFromLeft {
@@ -75,19 +75,19 @@ body.home .trusted-web-sec{
     }
 }
 @media only screen and (max-width: 810px) {
-    body.home .hero-santa{
+   .hero-santa{
         display: none;
     }
 }
 @media only screen and (max-width: 767px) {
-    body.home .hero-vide-wrap .hero-cap{
+    .hero-vide-wrap .hero-cap{
         right: -30px;
         top: -42px;
     }
-    body.home .hero-vide-wrap .hero-cap img {
+    .hero-vide-wrap .hero-cap img {
         max-width: 70px;
     }
-    body.home .hero-vide-wrap .hero-img-video .play-video{
+    .hero-vide-wrap .hero-img-video .play-video{
         bottom: 20px;
     }
 }
