@@ -28,7 +28,7 @@
         assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
       endif
     -%}
-      {%- form 'consultation', id: 'Consultationform', class: 'isolate', title:"From Consultation Inquiry"-%}
+      {%- form 'contact', id: 'Consultationform', class: 'isolate', title:"From Consultation Inquiry"-%}
        <input type="hidden" name="consultationform[form]" value="Dr Consultation Inquiry" title="From Consultationf Inquiry">   
       {%- if form.posted_successfully? -%}
         <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
